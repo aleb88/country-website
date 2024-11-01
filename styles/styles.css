@@ -1,0 +1,15 @@
+video {
+    height: 100vh;
+    /* might not need the below line */
+    /* overflow: hidden; */
+    /* consier setting overflow: visible if you put it inside flex container */
+    object-fit: cover;
+    width: 100%;
+}
+
+.banner {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
