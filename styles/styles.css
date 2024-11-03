@@ -1,15 +1,260 @@
-video {
-    height: 100vh;
-    /* might not need the below line */
-    /* overflow: hidden; */
-    /* consier setting overflow: visible if you put it inside flex container */
-    object-fit: cover;
-    width: 100%;
+body {
+    background-color: #ba0b2e;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
 }
+
+video {
+
+}
+
+p{
+    margin: 0.5rem;
+}
+
 
 .banner {
     display: block;
     width: 100%;
     height: 100vh;
     object-fit: cover;
+    overflow: hidden;
 }
+
+.half {
+    height: 50vh;
+}
+
+.history-img {
+    float: left;
+    margin-right: 0.5rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+form {
+
+}
+
+label, input {
+    display: block;
+}
+
+input, textarea {
+    margin-bottom: 0.5rem;
+}
+
+header {
+    background-color: #ffffff;
+    color: #000001;
+    /* padding: 20px 0 0; */
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    /* flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; */
+
+}
+
+main {
+    background-color: #ffffff;
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+footer {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: #ffa600;
+    color: black;
+    text-align: center;
+}
+
+/* Start of Hamburger Menu Styling, taken from */
+/* FWDP 2000 Day 3 files */
+/* Responsive Menus */
+/* Dropdown Menu */
+nav {
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    background-color: #ffffff;   
+}
+
+nav.activated {
+    transition: height 0.3s ease, visibility 0s 0.3s;
+}
+
+.show nav {
+    transition: height 0.3s ease, visibility 0s;
+    visibility: visible;
+    height: 253px;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 0 20px;
+    font-size: 1.2em;
+    display: block;
+    border-right: none;
+    color: #000001;
+    border-bottom: none;
+    border-top: none;
+    line-height: 40px;
+}
+
+nav a:hover,
+nav a:active,
+nav a:focus {
+    outline: none;
+    background-color: rgba(255,255,255, 0.3);
+}
+
+/* Hamburger Styles */
+.btn-menu {
+    margin: 20px 20px 20px 20px;
+    display: block;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.btn-menu .button-content {
+    display: block;
+    height: 24px;
+    cursor: pointer;
+}
+
+.btn-menu .text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.btn-menu .bar {
+    display: block;
+    height: 4px;
+    background-color: #000001;
+    width: 100%;
+    position: relative;
+    top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-menu .bar:before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    top: 10px;
+    left: 0;
+    background-color: #000001;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-menu .bar:after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    top: -10px;
+    left: 0;
+    background-color: #000001;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-menu:focus {
+    outline: none;
+}
+
+/* not sure if you even need this one */
+.btn-menu:focus .button-content {
+    outline: 5px solid #7683C9;
+}
+
+.show .btn-menu .bar {
+    background-color: transparent;	
+}
+
+.show .btn-menu .bar:before {
+    top: 0;
+    transform: rotate(45deg);	
+}
+
+.show .btn-menu .bar:after {
+    top: 0;
+    transform: rotate(-45deg);	
+}
+
+/* End Dropdown */
+
+@media (min-width: 560px){
+    header {
+        display: block;
+    }
+
+    .btn-menu {
+        display: none;
+    }
+    
+    nav {
+        background-color: white;
+        visibility: visible;
+        height: auto;
+        max-width: 62rem;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    nav ul {
+        display: flex;
+    }
+    
+    nav li {
+        flex: 1;
+    }
+    
+    nav a {
+        color: black;
+        text-decoration: none;
+        border-top: none;
+        /* border-right: 2px solid #0B29CF;
+        border-bottom: 2px solid #0B29CF; */
+        line-height: 42px;
+        text-align: center;
+    }
+    
+    nav li:last-child a {
+        border-right: none;
+    }
+    
+    nav a:hover,
+    nav a:active,
+    nav a:focus {
+        background-color: #003866;
+        color: #ffffff;
+        outline: none;
+    }
+ 
+}
+/* End of Hamburger Menu Styles */
