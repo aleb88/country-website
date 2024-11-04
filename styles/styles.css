@@ -44,7 +44,7 @@ p{
     margin: 1rem;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 45em) {
     blockquote p {
         width: 65%;
     }
@@ -229,7 +229,7 @@ nav a:focus {
 
 /* End Dropdown */
 
-@media (min-width: 560px){
+@media (min-width: 35em){
     header {
         display: block;
     }
@@ -339,7 +339,7 @@ nav a:focus {
 
 }
 
-@media (min-width: 560px) {
+@media (min-width: 35em) {
     .destination-card {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -348,11 +348,15 @@ nav a:focus {
         justify-items: center;
         margin-bottom: 0.5rem;
     }
+    
 
     .grid2 .card-image-container {
+        /* grid-column: 1 / 2;
+        grid-row: 1 / 2; */
         order: -1;
     }
     
+
 }
 
 table {
